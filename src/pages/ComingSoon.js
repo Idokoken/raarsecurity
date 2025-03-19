@@ -50,14 +50,14 @@ const Wrapper = styled.div`
 const ComingSoon = () => {
 
 
-    return (
-        <Wrapper>
-            <h1 className="mt-4">Welocome to Gemhandsglobal</h1>
-            <div className="soon">
+  return (
+    <Wrapper>
+      <h1 className="mt-4">Welocome to RAAR Security ltd</h1>
+      <div className="soon">
 
-            </div>
-        </Wrapper>
-    );
+      </div>
+    </Wrapper>
+  );
 };
 
 export default ComingSoon;

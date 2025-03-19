@@ -8,8 +8,8 @@ const Wrapper = styled.footer`
   padding: 0;
   margin: 0;
   font-family: var(--primary-font);
-  // background: white;
-  // color: black;
+  background: black;
+  color: white;
 
   .footer {
     width: 100vw;
@@ -44,7 +44,7 @@ const Wrapper = styled.footer`
   }
   .copywite {
     margin: 10px;
-    font-family: "Oleo Script Swash Caps", cursive;
+    font-style: italic;
     ${Tablet({ fontSize: "20px" })}
   }
   .footer-logo{
@@ -64,13 +64,18 @@ const Wrapper = styled.footer`
     padding: 10px;
   }
   .icon-container {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: white;
+    color: black;
+    padding: 7px;
+    padding-top: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 40px;
-    width: 40px;
-    border-radius: 5px;
   }
+
   .icon {
     margin-right: 20px;
     height: 100%;
@@ -95,10 +100,7 @@ function Footer() {
             <img className="footer-logo" src="/images/brand.png" alt="brand" />{" "}
             <h3 className="ms-2">RAAR Security ltd</h3>
           </div>
-          {/* <p>
-            Empower, Protect, Prevail
-          </p> */}
-          <p>Empowerment, Protection, and the ability to overcome challenges.</p>
+          <p>We Protect, You Rest.</p>
         </div>
 
         <div className="item">
@@ -112,21 +114,27 @@ function Footer() {
           <p>
             <Link to="/about">About Us</Link>
           </p>
-          <p>
-            <Link to="/gallery">Gallery</Link>
-          </p>
+
 
         </div>
         <div className="item">
           <h3>Follow Us</h3>
           <div className="icons-container">
 
-            <Link className="icon-container" to="https://facebook.com/raarsecurityltd">
-              <img className="icon" src="/images/linkedin.png" alt="linkedIn" />
+            <Link className="icon-container" target="_blanck" to="https://facebook.com/raarsecurityltd">
+              <i className="fa-brands fa-facebook brand"></i>
             </Link>
-            <Link className="icon-container" to="https://youtube.com/raarsecurityltd">
-              <img className="icon" src="/images/youtube.png" alt="youtube" />
+            <Link className="icon-container" target="_blanck" to="https://youtube.com/raarsecurityltd">
+              <i className="fa-brands fa-instagram brand"></i>
             </Link>
+            <Link className="icon-container" target="_blanck" to="https://youtube.com/raarsecurityltd">
+              <i className="fa-brands fa-youtube brand"></i>
+            </Link>
+            <Link className="icon-container" target="_blanck" to="https://youtube.com/raarsecurityltd">
+              <i className="fa-brands fa-linkedin-in brand"></i>
+            </Link>
+
+
 
           </div>
         </div>

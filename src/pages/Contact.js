@@ -1,10 +1,36 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Link } from "react-router-dom";
-import { Tablet, Desktop } from './../Responsive';
+// import { Link } from "react-router-dom";
+import { Tablet } from './../Responsive';
 
 
 const Wrapper = styled.div`
+padding: 0;
+  margin: 0;
+  font-family: var(--primary-font);
+  min-height: 50vh; 
+
+  .hero {
+    height: 20vh;
+    background-image: url("/images/bg-hero.jpg");
+    background-size: cover;
+    position: relative;
+    z-index: -2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+    .hero .hero-bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(270deg, rgba(171, 188, 45, 0) 28.61%, rgba(171, 188, 45, 0.9) 53.09%);
+    z-index: -1;
+}
+.hero h1{
+    font-weight: 700;
+}
 
 
 .contact{
@@ -22,8 +48,8 @@ const Wrapper = styled.div`
      font-size: 16px;
      ${Tablet({ fontSize: '20px' })}
  }
- .contact a{
-     padding: 5px 10px;
+ .contact h6{
+     padding: 10px 10px;
      background: var(--primary-color);
      color: white;
      font-size: 20px;
@@ -75,29 +101,35 @@ const Wrapper = styled.div`
 function Contact() {
     return (
         <Wrapper>
+            <section class="hero">
+                <div class='hero-bg'></div>
+                <h1>Contact Us</h1>
+            </section>
             <section className="contact" id="contact">
-                <h2>Contact Us</h2>
-                <h5 className="my-2 mx-1">Better yet, see us in person!</h5>
-                <p className="my-3">If you have questions about the opportunities available to you in our program, send us a message.
-                    We will get back to you as soon as possible.
+
+                <h5 className="my-2 mx-1">Do want to see us in person!</h5>
+                <p className="my-3">
+                    Reach out to us for reliable security solutions. Whether you need 24/7 surveillance, on-site
+                    guards, or customized protection services, our team is here to help. Contact us today for a
+                    consultation
                 </p>
-                <h5 className="my-2 mx-1">raarsecurityltd</h5>
-                <h5 className="my-2 mx-1">Hours</h5>
-                <p>Opens: Monday - Saturday</p>
-                <p>09:00am – 10:00pm</p>
+
+                <h5 className="my-2 mx-1">Office Hours</h5>
+                <p>Opens: Monday - Friday</p>
+                <p>08:30am – 5:00pm</p>
                 <div className="address">
                     <div className="one">
                         <span className="me-1"><i className="fa-solid icon fa-location-dot"></i></span>
                         <div className="">
                             <h4>Office Address</h4>
-                            <p>NO 19 Anu Crescent, Palm Crescent Estate Badore Lagos</p>
+                            <p>NO 30 Howeidy street D'Rock Plaza kado Estate Abuja, Nigeria</p>
                         </div>
                     </div>
                     <div className="one">
                         <span className="me-1"><i className="fa-solid icon fa-phone"></i></span>
                         <div className="">
                             <h4>Our Hotline</h4>
-                            <p>+2348062538412</p>
+                            <p>+234815403965</p>
 
                         </div>
                     </div>
@@ -106,11 +138,11 @@ function Contact() {
                         <div className="">
                             <h4>Email Address</h4>
                             <p>Info@raarsecurityltd.com</p>
-                            <p>Support@raarsecurityltd.com</p>
+                            <p>hello@raarsecurityltd.com</p>
                         </div>
                     </div>
                 </div>
-                <Link to='https://forms.gle/Wi9t9hVjmgmtUqmX8' target="_blanck" className="my-2" >Get in Touch</Link>
+                <h6 className="my-2" >Get in Touch</h6>
             </section>
         </Wrapper>
     )

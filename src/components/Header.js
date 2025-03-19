@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { HashLink as Link } from "react-router-hash-link";
+import { Link } from "react-router-dom";
 import { Tablet } from './../Responsive';
 
 const Wrapper = styled.div`
@@ -9,9 +9,7 @@ const Wrapper = styled.div`
   font-family: var(--primary-font);
 
   nav {
-    // box-shadow: 0 5px 5px #888888;
-    background: white;
-    
+    background: rgb(0, 0, 0);    
   }
  nav .nav-item .nav-link{
      color: var(--primary-color);
@@ -60,25 +58,21 @@ function Header({ user }) {
                     <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
                         <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <Link className="nav-link" to="#home">
+                                <Link className="nav-link" to="/">
                                     Home
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="#contact">
+                                <Link className="nav-link" to="/contact">
                                     Contact
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="#about">
+                                <Link className="nav-link" to="/about">
                                     About Us
                                 </Link>
                             </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to="#gallery">
-                                    Gallery
-                                </Link>
-                            </li>
+
                         </ul>
                     </div>
                 </div>
