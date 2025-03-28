@@ -8,28 +8,31 @@ const Wrapper = styled.div`
 padding: 0;
   margin: 0;
   font-family: var(--primary-font);
-  min-height: 50vh; 
 
-  .hero {
-    height: 20vh;
-    background-image: url("/images/bg-hero.jpg");
-    background-size: cover;
-    position: relative;
-    z-index: -2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-}
-    .hero .hero-bg{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(270deg, rgba(171, 188, 45, 0) 28.61%, rgba(171, 188, 45, 0.9) 53.09%);
-    z-index: -1;
-}
-.hero h1{
+//   .hero {
+//     height: 20vh;
+//     background-image: url("/images/bg-hero.jpg");
+//     background-size: cover;
+//     position: relative;
+//     z-index: -2;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     color: white;
+// }
+//     .hero .hero-bg{
+//     position: absolute;
+//     width: 100%;
+//     height: 100%;
+//     background: linear-gradient(270deg, rgba(171, 188, 45, 0) 28.61%, rgba(171, 188, 45, 0.9) 53.09%);
+//     z-index: -1;
+// }
+.contact-hero h1{
     font-weight: 700;
+    margin: 10px 20px;
+    color: var(--primary-color);
+    text-align: center;
+    font-size: 40px;
 }
 
 
@@ -38,7 +41,7 @@ padding: 0;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 20px;J
+    padding: 20px;
  }
  .contact h2{
      color: rgba(0, 0, 0, 0.5);
@@ -101,7 +104,7 @@ padding: 0;
 function Contact() {
     return (
         <Wrapper>
-            <section class="hero">
+            <section class="contact-hero">
                 <div class='hero-bg'></div>
                 <h1>Contact Us</h1>
             </section>

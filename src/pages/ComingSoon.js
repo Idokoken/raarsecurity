@@ -2,6 +2,7 @@ import React from "react";
 // import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Tablet } from "../Responsive";
+import { Link } from "react-router-dom";
 // import { Tablet, Desktop } from "../Responsive";
 
 
@@ -19,11 +20,11 @@ const Wrapper = styled.div`
   
    a {
     padding: 10px 15px;
-    background: var(--primary-color);
+    background: black;
     color: white;
     font-size: 20px;
     font-weight: 500;
-    border-radius: 30px;
+    border-radius: 20px;
     text-decoration: none;
   }
   .more a:hover {
@@ -40,7 +41,7 @@ const Wrapper = styled.div`
    height: 50vh;
    display: flex;
    justify-content: center;
-   align-items: flex-end;
+   align-items: flex-start;
    ${Tablet({ height: "60vh" })}
 }
 
@@ -52,9 +53,9 @@ const ComingSoon = () => {
 
   return (
     <Wrapper>
-      <h1 className="mt-4">Welocome to RAAR Security ltd</h1>
+      <h1 className="mt-4">RAAR Security ltd Social Media Profile</h1>
       <div className="soon">
-
+        <Link to="/">Back Home</Link>
       </div>
     </Wrapper>
   );

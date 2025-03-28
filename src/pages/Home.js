@@ -2,8 +2,11 @@ import React from "react";
 import { Tablet } from './../Responsive';
 import styled from "styled-components"
 import ImageSlider from "../components/ImageSlider";
+import Contact from "./Contact";
+import About from "./About";
 // import SubscribeForm from "../components/SubscribeForm";
 // import Stories from "../components/Stories";
+
 
 
 const Wrapper = styled.div`
@@ -66,7 +69,7 @@ const Wrapper = styled.div`
     text-decoration: none;
   }
 
-  .img-container{
+  .all .img-container{
      width: 90px;
      height: 90px;
      border: 2px solid var(--primary-color);
@@ -74,7 +77,7 @@ const Wrapper = styled.div`
      padding: 4px;
      ${Tablet({ width: "200px", height: "200px" })}
   }
-   .img-container img{
+   .all .img-container img{
      width: 100%;
      height: 100%;
      border-radius: 50%;
@@ -122,13 +125,13 @@ const Home = () => {
 
   return (
     <Wrapper>
-      <section>
+      <section className="home" id="home">
         <ImageSlider />
       </section>
 
       <section className="services container my-3">
         <h2>Our Services</h2>
-        <p>our company provides a vast selection of secure and approved equipment to aid in various security
+        <p>Our company provides a vast selection of secure and approved equipment to aid in various security
           operations. Leveraging our diverse network of suppliers, we strive to strike a balance between
           pricing, quality, and timely service delivery. Our primary objective is to deliver top-tier
           security services to clients across the public and private sectors which include but not limited to
@@ -237,7 +240,12 @@ const Home = () => {
         </div>
       </section>
 
-
+      <section className="about" id="about">
+        <About />
+      </section>
+      <section className="contact" id="contact">
+        <Contact />
+      </section>
 
     </Wrapper>
   );

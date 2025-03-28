@@ -1,5 +1,6 @@
 import React from "react";
 import { HashLink as Link } from "react-router-hash-link";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { Tablet } from "../Responsive";
 
@@ -106,13 +107,13 @@ function Footer() {
         <div className="item">
           <h3>Quick Links</h3>
           <p>
-            <Link to="/">Home</Link>
+            <Link to="#home">Home</Link>
           </p>
           <p>
-            <Link to="/contact">Contact</Link>
+            <Link to="#contact">Contact</Link>
           </p>
           <p>
-            <Link to="/about">About Us</Link>
+            <Link to="#about">About Us</Link>
           </p>
 
 
@@ -121,18 +122,15 @@ function Footer() {
           <h3>Follow Us</h3>
           <div className="icons-container">
 
-            <Link className="icon-container" target="_blanck" to="https://facebook.com/raarsecurityltd">
+            <NavLink className="icon-container" target="_blanck" to="/soon">
               <i className="fa-brands fa-facebook brand"></i>
-            </Link>
-            <Link className="icon-container" target="_blanck" to="https://youtube.com/raarsecurityltd">
+            </NavLink>
+            <NavLink className="icon-container" target="_blanck" to="/soon">
               <i className="fa-brands fa-instagram brand"></i>
-            </Link>
-            <Link className="icon-container" target="_blanck" to="https://youtube.com/raarsecurityltd">
-              <i className="fa-brands fa-youtube brand"></i>
-            </Link>
-            <Link className="icon-container" target="_blanck" to="https://youtube.com/raarsecurityltd">
+            </NavLink>
+            <NavLink className="icon-container" target="_blanck" to="/soon">
               <i className="fa-brands fa-linkedin-in brand"></i>
-            </Link>
+            </NavLink>
 
 
 

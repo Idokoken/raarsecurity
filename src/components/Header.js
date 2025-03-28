@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 import { Tablet } from './../Responsive';
 
 const Wrapper = styled.div`
@@ -58,17 +58,17 @@ function Header({ user }) {
                     <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
                         <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <Link className="nav-link" to="/">
+                                <Link className="nav-link" to="#home">
                                     Home
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/contact">
+                                <Link className="nav-link" to="#contact">
                                     Contact
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/about">
+                                <Link className="nav-link" to="#about">
                                     About Us
                                 </Link>
                             </li>

@@ -1,5 +1,4 @@
 import React from 'react'
-// import { Link } from "react-router-dom";
 // import { Tablet, Desktop } from './../Responsive';
 import styled from "styled-components";
 
@@ -7,45 +6,48 @@ const Wrapper = styled.div`
   padding: 0;
   margin: 0;
   font-family: var(--primary-font);
-  min-height: 50vh; 
 
-  .hero {
-    height: 20vh;
-    background-image: url("/images/bg-hero.jpg");
-    background-size: cover;
-    position: relative;
-    z-index: -2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-}
-    .hero .hero-bg{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(270deg, rgba(171, 188, 45, 0) 28.61%, rgba(171, 188, 45, 0.9) 53.09%);
-    z-index: -1;
-}
-.hero h1{
+//   .hero {
+//     height: 20vh;
+//     background-image: url("/images/bg-hero.jpg");
+//     background-size: cover;
+//     position: relative;
+//     z-index: -2;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     color: white;
+// }
+//     .hero .hero-bg{
+//     position: absolute;
+//     width: 100%;
+//     height: 100%;
+//     background: linear-gradient(270deg, rgba(171, 188, 45, 0) 28.61%, rgba(171, 188, 45, 0.9) 53.09%);
+//     z-index: -1;
+// }
+.about-hero h1{
     font-weight: 700;
+    margin: 10px 20px;
+    color: var(--primary-color);
+    text-align: center;
+    font-size: 40px;
 }
     
   .content{
-  	min-height: 40vh;
+  	
     margin: 20px auto;
 
   }
-  h3{
+  .content h3{
   	text-align: center;
   	font-weight: 700;
   }
-  .img-container{
+   .content .img-container{
   	 width: 100px;
   	 height: 100px;
   	 margin: 30px auto 15px;   	 
   }
-  .img-container img{
+   .content .img-container img{
   	  width: 100%;
   	  height: 100%;
   }
@@ -59,7 +61,7 @@ const Wrapper = styled.div`
 function About() {
     return (
         <Wrapper>
-            <section class="hero">
+            <section class="about-hero">
                 <div class='hero-bg'></div>
                 <h1>About Us</h1>
             </section>
@@ -70,7 +72,7 @@ function About() {
                 </div>
                 <h3>Vision</h3>
                 <p>
-                    Rendering total security solutions to our esteemed clients and maintaaining the highest standard
+                    Rendering total security solutions to our esteemed clients and maintaining the highest standard
                     of security professionalism.
                 </p>
                 <div className="img-container">
@@ -89,7 +91,7 @@ function About() {
                 </div>
                 <h3>Our Story</h3>
                 <p>
-                    Raar Security Limited is a security service facilittion and consulting company, registered under
+                    Raar Security Limited is a security service facilitation and consulting company, registered under
                     the Corporate Affairs comission in Nigeria, with RC Number 1520254.
                 </p>
                 <p>

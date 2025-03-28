@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Tablet } from './../Responsive';
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 import Image1 from "./items/image1.jpg"
 import Image2 from "./items/image2.jpg"
 import Image3 from "./items/image3.jpg"
@@ -59,18 +59,21 @@ const Wrapper = styled.div`
   padding: 10px 20px;
   border-radius: 5px;
   z-index: 1; 
-  
+  ${Tablet({ transform: "translate(-40%, -50%)" })}
+   
 }
 
 
   h1 {
     margin: 20px 0;
     font-weight: 700;
+    text-align: left;
     ${Tablet({ fontSize: '55px', margin: "30px 0" })}
   }
   p{
     font-weight: 500;
-    ${Tablet({ fontSize: '20px', width: "725px" })}
+    text-align: left;
+    ${Tablet({ fontSize: '20px' })}
   }
    a{
     padding: 10px 15px;
@@ -80,10 +83,22 @@ const Wrapper = styled.div`
     font-weight: 500;
     border-radius: 10px;
     text-decoration: none;
-    margin-top: 30px;
-    
+    margin-top: 20px;   
+    max-width: 250px;
+    text-align: left;
   }
-
+ .hero-bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7 );
+    z-index: 1;
+}
+  .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
 
 `
 
@@ -97,7 +112,7 @@ function ImageSlider() {
       setCurrentIndex((prevIndex) =>
         prevIndex === images.length - 1 ? 0 : prevIndex + 1
       );
-    }, 3000); // Change every 3 seconds
+    }, 8000); // Change every 3 seconds
 
     return () => clearInterval(interval);
   }, [images.length]);
@@ -116,13 +131,16 @@ function ImageSlider() {
               className={`slide-image ${index === currentIndex ? 'active' : ''}`}
             />
           ))}
+          <div className="hero-bg"></div>
           <div className="overlay-text">
 
-            <h1>RAAR SECURITY LIMITED</h1>
-            <p className='pb-3'>
-              Total Security Solution
-            </p>
-            <Link to="/contact" className="">CONTACT US TODAY</Link>
+            <div className='content'>
+              <h1>RAAR SECURITY LIMITED</h1>
+              <p className='pb-3'>
+                Offering Total Security Solution
+              </p>
+              <Link to="#contact" className="">CONTACT US TODAY</Link>
+            </div>
 
           </div>
         </div>
