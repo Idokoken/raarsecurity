@@ -104,8 +104,8 @@ padding: 0;
 function Contact() {
     return (
         <Wrapper>
-            <section class="contact-hero">
-                <div class='hero-bg'></div>
+            <section className="contact-hero">
+                <div className='hero-bg'></div>
                 <h1>Contact Us</h1>
             </section>
             <section className="contact" id="contact">

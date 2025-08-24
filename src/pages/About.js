@@ -61,8 +61,8 @@ const Wrapper = styled.div`
 function About() {
     return (
         <Wrapper>
-            <section class="about-hero">
-                <div class='hero-bg'></div>
+            <section className="about-hero">
+                <div className='hero-bg'></div>
                 <h1>About Us</h1>
             </section>
 
@@ -91,8 +91,9 @@ function About() {
                 </div>
                 <h3>Our Story</h3>
                 <p>
-                    Raar Security Limited is a security service facilitation and consulting company, registered under
-                    the Corporate Affairs comission in Nigeria, with RC Number 1520254.
+                    <strong>RAAR Security is a Category A security service</strong>  facilitation and
+                    consulting company, registered under the Corporate Affairs comission in Nigeria,
+                    with RC Number 1520254.
                 </p>
                 <p>
                     Raar Security Limited is established with the purpose of providing professional security services

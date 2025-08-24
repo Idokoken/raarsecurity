@@ -198,7 +198,6 @@ const Home = () => {
 
       </section>
 
-
       <section className="clients container">
         <h2>Our Clientele</h2>
         <p>At RAAR security limited, we handle client's requests with dexterity, we are dedicated to
