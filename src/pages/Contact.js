@@ -125,7 +125,7 @@ function Contact() {
                         <span className="me-1"><i className="fa-solid icon fa-location-dot"></i></span>
                         <div className="">
                             <h4>Office Address</h4>
-                            <p>NO 30 Howeidy street D'Rock Plaza kado Estate Abuja, Nigeria</p>
+                            <p>47 Atta A.A Street, Kado Estate Abuja, Nigeria</p>
                         </div>
                     </div>
                     <div className="one">
